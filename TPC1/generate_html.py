@@ -328,8 +328,6 @@ def build_all_brands(vehicles: dict, output_dir: str):
     for brand in sorted(brands_models.keys()):
         build_brand_model(brand, brands_models[brand], output_dir)
 
-
-
 def main():
     mk_dir(OUTPUT_DIR)
     mk_dir(os.path.join(OUTPUT_DIR, "repairs"))
@@ -340,8 +338,7 @@ def main():
     repairs = data.get("reparacoes", [])
     if not isinstance(repairs, list):
         raise ValueError("Expected 'reparacoes' to be a list")
-
-    # Add an 'id' field to each entry (important for linking)
+    
     for idx, r in enumerate(repairs, start=1):
         r["id"] = make_id(r, idx)
 

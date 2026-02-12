@@ -50,7 +50,6 @@ Para a resolução deste trabalho foi desenvolvido um script em python, o script
    - Mapeamento: intervenção -> reparações
 
 3. **Geração de páginas**: Cria 4 tipos de páginas HTML
-   - Página de [índice com navegação](output/index.html)
    - Páginas individuais de [reparações](output/repairs)
    - Páginas por [tipo de intervenção](output/intervention)
    - Páginas por [marca/modelo](output/brand_model)
