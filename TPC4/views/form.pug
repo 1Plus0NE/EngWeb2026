@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-purple
+      h2= emd ? "Edit EMD Record" : "New EMD Record"
+    
+    form.w3-container.w3-padding-16(method="POST" action=emd ? `/emd/${emd.id}` : "/emd")
+      fieldset
+        legend Metadata
+        if emd
+          input(type="hidden" name="id" value=emd.id)
+        
+        label Nome
+        input.w3-input.w3-round(type="text" name="nome" value=emd ? emd.nome : "")
+        
+        label Data
+        input.w3-input.w3-round(type="text" name="dataEMD" value=emd ? emd.dataEMD : "")
+        
+        label Idade 
+        input.w3-input.w3-round(type="text" name="idade" value=emd ? emd.idade : "")
+
+        label Género 
+        input.w3-input.w3-round(type="text" name="género" value=emd ? emd.género : "")
+
+        label Morada
+        input.w3-input.w3-round(type="text" name="morada" value=emd ? emd.morada : "")
+
+        label Modalidade
+        input.w3-input.w3-round(type="text" name="modalidade" value=emd ? emd.modalidade : "")
+        
+        label Clube
+        input.w3-input.w3-round(type="text" name="clube" value=emd ? emd.clube : "")
+
+        label Email
+        input.w3-input.w3-round(type="text" name="email" value=emd ? emd.email : "")
+      
+      button.w3-btn.w3-purple.w3-margin-top(type="submit")= emd ? "Update" : "Insert"
+      a.w3-btn.w3-grey.w3-margin-top.w3-margin-left(href="/") Cancel
