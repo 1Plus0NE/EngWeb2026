@@ -2,7 +2,7 @@
 
 # Data
 
-- 25/02/2026
+- 05/03/2026
 
 # Autor
 
@@ -29,9 +29,11 @@ Neste trabalho de casa foi proposto a construção de um Servidor Aplicacional v
 
 ## Resolução
 
-Em primeiro lugar foi desenvolvido um script em python para normalizar os dados do json disponibilizado pelo professor de modo que esteja pronto para ser servido para o json-server. Nesta parte, foi adicionado o campo `id` à coleção de filmes, em seguida foram criadas duas coleções de modo a facilitar o desenvolvimento do servidor aplicacional para as rotas pedidas, foi criada a coleção de atores que inclui o id, o nome do/a autor/atriz e a lista de filmes que ele/a participou, e foi criada a coleção de géneros que inclui o id, o nome do género e a lista de filmes associados a esse género.
+Em primeiro lugar foi desenvolvido um script em python para normalizar os dados do json disponibilizado pelo professor de modo que esteja pronto para ser servido para o json-server. 
 
-Em seguida foi desenvolvido o servidor aplicacional em Express
+Nesta parte, foi adicionado o campo `id` à coleção de filmes, em seguida foram criadas duas coleções de modo a facilitar o desenvolvimento do servidor aplicacional para as rotas pedidas, foi criada a coleção de atores que inclui o id, o nome do/a autor/atriz e a lista de filmes que ele/a participou, e foi criada a coleção de géneros que inclui o id, o nome do género e a lista de filmes associados a esse género.
+
+Em seguida foi desenvolvido o servidor aplicacional com Express, onde foram configuradas as dependências necessárias, nomeadamente o axios para realizar pedidos HTTP à API e o Pug como motor de templates para gerar as páginas HTML de forma dinâmica.
 
 # Testes
 
