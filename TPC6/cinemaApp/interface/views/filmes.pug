@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1.w3-left Lista de Filmes
+      a.w3-btn.w3-round.w3-white.w3-right.w3-margin-top(href="/") Voltar
+      .w3-clear
+    .w3-container
+      table.w3-table-all.w3-margin-top
+        tr
+          th ID
+          th Título
+          th Ano
+          th No. Atores
+          th No. Géneros 
+        each f in filmes
+          tr.w3-hover-dark-grey(onclick=`window.location='/filmes/${f._id}'` style="cursor:pointer")
+            td= f._id
+            td= f.title
+            td= f.year
+            td= f.cast ? f.cast.length : 0
+            td= f.genres ? f.genres.length : 0
+      footer.w3-container.w3-light-grey
+        a.w3-btn.w3-round.w3-blue-grey.w3-margin-right(href="/") Voltar    

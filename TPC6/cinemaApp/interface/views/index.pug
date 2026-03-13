@@ -1,0 +1,34 @@
+extends layout.pug
+
+block content
+  .w3-container.w3-margin-top
+    .w3-card-4
+
+      header.w3-container.w3-teal
+        h2 Menu de Listagens
+
+      .w3-row-padding.w3-padding
+
+        .w3-third
+          .w3-card.w3-hover-shadow.w3-padding.w3-center.menu-card(
+            onclick="window.location='/filmes'"
+            style="cursor:pointer"
+          )
+            h3 Filmes
+            p Ver lista completa de filmes
+
+        .w3-third
+          .w3-card.w3-hover-shadow.w3-padding.w3-center.menu-card(
+            onclick="window.location='/atores'"
+            style="cursor:pointer"
+          )
+            h3 Atores
+            p Ver lista de atores e participações
+
+        .w3-third
+          .w3-card.w3-hover-shadow.w3-padding.w3-center.menu-card(
+            onclick="window.location='/generos'"
+            style="cursor:pointer"
+          )
+            h3 Géneros
+            p Ver géneros de filmes

@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+  .w3-container.w3-margin-top
+    .w3-card-4.w3-padding
+      header.w3-container.w3-teal
+        h2 #{filme.title}
+
+      .w3-container.w3-padding
+        table.w3-table-all.w3-margin-top
+            tr
+                th Título
+                td= filme.title
+            tr
+                th Ano
+                td= filme.year
+            tr
+                th Elenco 
+                td= filme.cast.join(', ')
+            tr
+                th Géneros
+                td= filme.genres.join(', ')
+
+        footer.w3-container.w3-light-grey
+            a.w3-btn.w3-round.w3-blue-grey.w3-margin-right(href="/filmes") Voltar

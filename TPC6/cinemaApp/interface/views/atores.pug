@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1.w3-left Lista de Atores
+      a.w3-btn.w3-round.w3-white.w3-right.w3-margin-top(href="/") Voltar
+      .w3-clear
+    .w3-container
+      table.w3-table-all.w3-margin-top
+        tr
+          th Nome
+          th No. Filmes
+        each a in atores
+          tr.w3-hover-dark-grey(onclick=`window.location='/atores/${a._id}'` style="cursor:pointer")
+            td= a.name
+            td= a.films ? a.films.length : 0
+    footer.w3-container.w3-light-grey
+      a.w3-btn.w3-round.w3-blue-grey.w3-margin-right(href="/") Voltar    
