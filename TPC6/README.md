@@ -109,7 +109,7 @@ http://localhost:7790
 - `api_dados/cinema_server.js`:	API de dados minimalista (Express + Mongoose)
 - `api_dados/Dockerfile`:	Imagem Docker para a API de dados (Node.js 22)
 - `api_dados/Dockerfile.mongo`:	Imagem Docker para o MongoDB com importação automática
-- `api_dados/import.sh`:	Script de importação do dataset e criação de índices de texto
+- `api_dados/mongo-init/import.sh`:	Script de importação do dataset e criação de índices de texto
 - `interface/app_interface.js`:	Servidor de interface web (Express + Pug + Axios)
 - `interface/Dockerfile.interface`:	Imagem Docker para o servidor de interface (Node.js 22)
 - `interface/views/*.pug`:	Templates Pug para todas as páginas HTML
